@@ -1,0 +1,28 @@
+<h1 class="mb-3">Detalle</h1>
+
+<div class="detail-card">
+  <img [src]="displayImage" alt="Foto de usuario" class="detail-avatar">
+
+  <div class="detail-info">
+    <h2>{{ user?.first_name }} {{ user?.last_name }}</h2>
+
+    <p class="mb-1">
+      <span class="detail-label">Correo:</span> {{ displayEmail }}
+    </p>
+    <p class="mb-2">
+      <span class="detail-label">Usuario:</span> {{ displayUsername }}
+    </p>
+
+    <div class="detail-actions">
+      <a class="btn btn-warning btn-sm"
+         [routerLink]="['/updateuser', user?.id]"
+         [state]="{ image: user?.image, email: user?.email, username: user?.username, first_name: user?.first_name, last_name: user?.last_name }">
+        Editar
+      </a>
+
+      <a class="btn btn-outline-secondary btn-sm" routerLink="/home">
+        Volver
+      </a>
+    </div>
+  </div>
+</div>

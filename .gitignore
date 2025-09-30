@@ -1,0 +1,12 @@
+# Node / Angular
+node_modules/
+dist/
+.angular/
+coverage/
+# Env & secrets
+.env
+*.env
+# IDE / OS
+.vscode/
+.DS_Store
+Thumbs.db

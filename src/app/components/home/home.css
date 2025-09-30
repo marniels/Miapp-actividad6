@@ -1,0 +1,8 @@
+/* Rejilla responsive en filas horizontales */
+.grid-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+.card-img-top.fit-cover{ height:160px; object-fit:cover; }
+.card-title{ font-weight:600; }

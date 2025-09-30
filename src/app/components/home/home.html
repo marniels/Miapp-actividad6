@@ -1,0 +1,37 @@
+<h1 class="mb-3">Lista de Usuarios</h1>
+
+<div *ngIf="loading" class="alert alert-warning">Cargando...</div>
+<div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+<!-- GRID de tarjetas -->
+<div class="grid-cards">
+  <div class="card h-100 shadow-sm" *ngFor="let u of users">
+    <img [src]="u.image" class="card-img-top fit-cover" alt="user" height="160">
+    <div class="card-body p-3">
+      <h6 class="card-title mb-1 text-truncate">{{ u.first_name }} {{ u.last_name }}</h6>
+      <small class="text-muted d-block text-truncate">
+        Usuario: {{ displayUsername(u) }}
+      </small>
+    </div>
+    <div class="card-footer bg-transparent">
+      <div class="d-flex justify-content-between gap-2">
+        <a class="btn btn-light btn-sm border"
+           [routerLink]="['/user', u.id]"
+           [state]="{ image: u.image, email: u.email, username: u.username, first_name: u.first_name, last_name: u.last_name }">Ver</a>
+
+        <a class="btn btn-warning btn-sm"
+           [routerLink]="['/updateuser', u.id]"
+           [state]="{ image: u.image, email: u.email, username: u.username, first_name: u.first_name, last_name: u.last_name }">Actualizar</a>
+
+        <button class="btn btn-danger btn-sm" (click)="delete(u.id)">Borrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Paginación centrada -->
+<div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+  <button class="btn btn-outline-secondary rounded-circle px-2" (click)="prev()" [disabled]="page===1">&lt;</button>
+  <span class="small">Página {{page}} / {{totalPages}}</span>
+  <button class="btn btn-outline-secondary rounded-circle px-2" (click)="next()" [disabled]="page===totalPages">&gt;</button>
+</div>

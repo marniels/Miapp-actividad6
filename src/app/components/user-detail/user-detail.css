@@ -1,0 +1,48 @@
+/* Estilos del detalle de usuario */
+.detail-card{
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border: 1px solid #e5e7eb;          /* gris claro */
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  background: #fff;
+}
+
+.detail-avatar{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.detail-info h2{
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.detail-label{
+  color: #6b7280;                      /* gris medio */
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.detail-actions{
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px){
+  .detail-card{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .detail-avatar{
+    width: 200px;
+    height: 200px;
+  }
+}
