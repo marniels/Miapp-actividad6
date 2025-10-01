@@ -19,7 +19,7 @@ Angular CLI (`npm i -g @angular/cli`) o usar `npx`
 //Ejecutar en desarrollo//
 ```bash
 npm i
-npm run dev   # abre http://localhost:5200
+npm run dev   # o ng serve -o si usas Angular CLI
 
 
 //Pantallazos//
