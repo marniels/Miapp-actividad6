@@ -20,3 +20,20 @@ Angular CLI (`npm i -g @angular/cli`) o usar `npx`
 ```bash
 npm i
 npm run dev   # abre http://localhost:5200
+
+
+//Pantallazos//
+Home (listado de usuarios con acciones)
+![Home](src/assets/capturas/home.png)
+
+Detalle de usuario
+![Detalle](src/assets/capturas/detalle.png)
+
+Formulario de actualización
+![Actualizar](src/assets/capturas/actualizar.png)
+
+Crear nuevo usuario
+![Nuevo usuario](src/assets/capturas/nuevo-usuario.png)
+
+Borrar usuario (confirmación)
+![Borrar usuario](src/assets/capturas/borrar-usuario.png)
