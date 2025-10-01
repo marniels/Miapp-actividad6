@@ -57,8 +57,9 @@ export class HomeComponent {
   siguiente() { this.next(); }
 
   // Borrar
-  delete(id: number) {
-    if (!confirm('¿Eliminar este usuario?')) return;
+ delete(id: number) {
+  const ok = confirm('¿Eliminar este usuario?');
+  if (!ok) return;
     this.api.deleteUser(id).subscribe({
       next: _ => this.users = this.users.filter(x => x.id !== id),
       error: _ => alert('La API de demo a veces no guarda cambios; actualiza para verificar.')
