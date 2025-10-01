@@ -4,7 +4,7 @@
 **Stack:** Git Bash · Angular 20 · TypeScript · Bootstrap 5
 
 ## Descripción
-Aplicación CRUD de usuarios: listado en grid, acciones de **detalle**, **actualizar**, **borrar**, y **creación/edición** usando el mismo formulario. Incluye paginación y navegación por rutas.
+Aplicación CRUD de usuarios: listado en grid, acciones de detalle, actualizar, borrar y creación/edición usando el mismo formulario. Incluye paginación y navegación por rutas.
 
 ## Rutas principales
 - `/home` — Grid de usuarios con acciones Ver / Editar / Eliminar y paginación
