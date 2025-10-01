@@ -13,15 +13,36 @@
       <span class="detail-label">Usuario:</span> {{ displayUsername }}
     </p>
 
-    <div class="detail-actions">
+    <div class="detail-actions d-flex gap-2">
+      <!-- Editar -->
       <a class="btn btn-warning btn-sm"
-         [routerLink]="['/updateuser', user?.id]"
-         [state]="{ image: user?.image, email: user?.email, username: user?.username, first_name: user?.first_name, last_name: user?.last_name }">
-        Editar
+         [routerLink]="['/updateuser', id]"
+         [state]="{
+           image: displayImage,
+           email: displayEmail,
+           username: displayUsername,
+           first_name: user?.first_name,
+           last_name: user?.last_name
+         }"
+         title="Actualizar" aria-label="Actualizar">
+        <i class="bi bi-pencil-square"></i>
+        <span class="visually-hidden">Actualizar</span>
       </a>
 
-      <a class="btn btn-outline-secondary btn-sm" routerLink="/home">
-        Volver
+      <!-- Borrar -->
+      <button class="btn btn-danger btn-sm"
+              (click)="onDelete()"
+              title="Borrar" aria-label="Borrar">
+        <i class="bi bi-trash"></i>
+        <span class="visually-hidden">Borrar</span>
+      </button>
+
+      <!-- Volver -->
+      <a class="btn btn-light btn-sm border"
+         routerLink="/home"
+         title="Volver" aria-label="Volver">
+        <i class="bi bi-arrow-left"></i>
+        <span class="visually-hidden">Volver</span>
       </a>
     </div>
   </div>
