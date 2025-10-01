@@ -4,13 +4,13 @@ Autor: Marlene Nielsen
 Stack: Gitbash . Angular 20 · TypeScript · Bootstrap 5
 
 //Descripción//
-Aplicación CRUD de usuarios: listado en grid, con botones detalle, actualizar , borrar,  creación/edición de mismo formulario y borrado con confirmación. Incluye paginación y navegación por rutas.
+Aplicación CRUD de usuarios: listado en grid, acciones de **detalle**, **actualizar**, **borrar**, y **creación/edición** usando el mismo formulario. Incluye paginación y navegación por rutas.
 
 //Rutas principales//
-/home — grid de usuarios con Ver / Editar / Eliminar y paginación
-/user/:id — detalle (foto, correo, usuario)
-/newuser — crear usuario (validaciones)
-/updateuser/:id — actualizar usuario (mismo formulario)
+- `/home` — Grid de usuarios con acciones Ver / Editar / Eliminar y paginación
+- `/user/:id` — Detalle (foto, correo, usuario)
+- `/newuser` — Crear usuario (validaciones)
+- `/updateuser/:id` — Actualizar usuario (mismo formulario reutilizado)
 
 //Requisitos//
 Node.js LTS 
@@ -23,17 +23,8 @@ npm run dev   # o ng serve -o si usas Angular CLI
 
 
 //Pantallazos//
-Home (listado de usuarios con acciones)
-![Home](src/assets/capturas/home.png)
-
-Detalle de usuario
-![Detalle](src/assets/capturas/detalle.png)
-
-Formulario de actualización
-![Actualizar](src/assets/capturas/actualizar.png)
-
-Crear nuevo usuario
-![Nuevo usuario](src/assets/capturas/nuevo-usuario.png)
-
-Borrar usuario (confirmación)
-![Borrar usuario](src/assets/capturas/borrar-usuario.png)
+- `src/assets/capturas/home.png`
+  - `src/assets/capturas/detalle.png`
+  - `src/assets/capturas/actualizar.png`
+  - `src/assets/capturas/nuevo-usuario.png`
+  - `src/assets/capturas/borrar-usuario.png`
